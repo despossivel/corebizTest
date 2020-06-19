@@ -15,8 +15,9 @@ const App = () => {
       <Slider />
       <BestSellers />
       <Newsletter />
+       */}
       <Newsletter />
-      */}
+
       <Footer />
 
     </div>

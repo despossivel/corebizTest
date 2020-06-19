@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
  
 export const Input = styled.input`
-width: ${props => props.width ? props.width : '500px'};
+width: ${props => props.width ? props.width : 'none'};
 height: ${props => props.height ? props.height : '33px'};
 border: ${props => props.border ? props.border : '0'};
 background: ${props => props.background ? props.background : '#efefef'};
-border-radius: ${props => props.borderRadius ? props.borderRadius : '7px 0px 0px 7px'};
+border-radius: ${props => props.borderRadius ? props.borderRadius : '7px 7px 7px 7px'};
 padding-left: 12px;
 
     &:focus{
