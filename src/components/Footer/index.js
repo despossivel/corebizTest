@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
 
-// import { Container } from './styles';
+import { Container } from './styles';
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return <Container>Footer</Container>;
 }
 
 export default memo(Footer);

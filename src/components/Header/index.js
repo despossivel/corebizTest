@@ -1,9 +1,18 @@
 import React, { memo } from 'react';
-
-// import { Container } from './styles';
+import Logo from '../Logo';
+import Search from '../Search';
+import Actions from '../HeaderActions';
+import { Container } from './styles';
 
 const Header = () => {
-  return <div>Header</div>;
+  return <Container>
+
+
+    <Logo />
+    <Search />
+    <Actions />
+
+  </Container>;
 }
 
 export default memo(Header);
