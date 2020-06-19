@@ -16,6 +16,7 @@ export const Container = styled.button`
     span{
         margin-left:5px;
         margin-right:5px;
+        color:${props => props.color ? props.color : '#fff'};
     }
 
     &:hover{

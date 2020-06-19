@@ -37,13 +37,11 @@ const Search = () => {
         }
 
     }
- 
+
 
     return <Form ref={formRef} onSubmit={handleSubmit} className="container-form">
         <Container >
-
-            <Input name="contextSearch" placeholder="O que está procurando?" />
-
+            <Input name="contextSearch" placeholder="O que está procurando?" borderRadius="7px 0px 0px 7px" />
             <Button type="submit" >{load ? 'Loading...' : <AiOutlineSearch />}</Button>
         </Container>
     </Form>

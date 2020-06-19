@@ -9,11 +9,10 @@ export const Container = styled.div`
     align-items: center;
 `;
 
-export const Title = styled.div`
-    font-family: Lato;
+export const Text = styled.div`
     font-style: normal;
-    font-weight: bold;
-    font-size: 22px;
+    font-weight: ${props => props.fontWeight ? props.fontWeight : 'normal'};;
+    font-size: ${props => props.size ? props.size : '22px'};
     line-height: 22px;
     display: flex;
     align-items: center;
@@ -23,4 +22,11 @@ export const Title = styled.div`
 
 export const FlexContainer = styled.div`
     display: flex;
+    margin-top: 20px;
+    transition: 0.3s;
+
+    div+div{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 `;
