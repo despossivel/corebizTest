@@ -7,6 +7,12 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media  (max-width: 700px)
+    {
+        height: 30vh;
+    }
+
 `;
 
 export const Text = styled.div`
@@ -29,4 +35,21 @@ export const FlexContainer = styled.div`
         margin-left: 15px;
         margin-right: 15px;
     }
+
+    @media  (max-width: 700px)
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        div+div{
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+
+    }
+
+
 `;
