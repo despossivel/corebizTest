@@ -8,7 +8,6 @@ export const Container = styled.div`
     align-items: normal;
 `;
 
-
 export const Items = styled.div`
     display: flex;
     flex-direction: row;
@@ -16,4 +15,12 @@ export const Items = styled.div`
     align-items: center;
 `;
 
+export const ButtonArrow = styled.div`
+    margin-left: 20px;
+    margin-right: 20px;
 
+    &:hover{
+        font-size: 22px;
+        cursor: pointer;
+    }
+`;

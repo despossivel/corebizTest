@@ -1,4 +1,4 @@
-import React, { memo, useState, useRef } from 'react';
+import React, { memo, useState, useRef, useCallback } from 'react';
 import { Form } from "@unform/web";
 import * as Yup from 'yup';
 // import { AiOutlineSearch } from 'react-icons/ai';
@@ -22,7 +22,7 @@ const Newsletter = () => {
   const [load, setLoad] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  async function handleSubmit(data, { reset }) {
+  const handleSubmit = useCallback(async (data, { reset }) => {
     setLoad(true);
     try {
       formRef.current.setErrors({});
@@ -53,7 +53,7 @@ const Newsletter = () => {
       setLoad(false)
     }
 
-  }
+  }, [])
 
 
   return <Form ref={formRef} onSubmit={handleSubmit} className="container-form">

@@ -4,9 +4,11 @@ import Search from '../Search';
 import Actions from '../HeaderActions';
 import { Container } from './styles';
 
+
 const Header = () => <Container>
   <Logo />
   <Search />
+  {/* <CartContext></CartContext> */}
   <Actions />
 </Container>;
 

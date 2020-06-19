@@ -1,11 +1,18 @@
-import React, { memo } from 'react';
+import React, { memo, useContext } from 'react';
 import ProductiMG from '../../asserts/product1.png';
+import {
+  CartContext
+} from '../../contexts/cart';
 import Button from '../Button';
 import StarRatingComponent from 'react-star-rating-component';
 
 import { Container, Img, TagOff, Details, Text } from './styles';
 
 const Product = () => {
+  const {
+    addItem
+  } = useContext(CartContext)
+
   return <Container>
     <div>
       <Img src={ProductiMG} alt="product1" />
@@ -28,7 +35,7 @@ const Product = () => {
     <Button {...{
       label: "Comprar",
       background: "#000"
-    }} />
+    }} onClick={e => addItem()} />
   </Container >;
 }
 

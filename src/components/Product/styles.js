@@ -7,6 +7,14 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
 
+
+    &:hover{
+        background: #E6E8EA;
+        cursor: pointer;
+        padding-bottom: 10px;
+        border-radius: 7px 7px 7px 7px;
+    }
+
 `;
 
 

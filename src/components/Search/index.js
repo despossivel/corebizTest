@@ -1,4 +1,4 @@
-import React, { useRef, useState, memo } from 'react';
+import React, { useRef, useState, memo, useCallback } from 'react';
 import { Form } from "@unform/web";
 import * as Yup from 'yup';
 import { AiOutlineSearch } from 'react-icons/ai';
@@ -10,7 +10,7 @@ const Search = () => {
     const formRef = useRef(null);
     const [load, setLoad] = useState(false);
 
-    async function handleSubmit(data, { reset }) {
+    const handleSubmit = useCallback(async (data, { reset }) => {
         setLoad(true);
         try {
             formRef.current.setErrors({});
@@ -36,7 +36,7 @@ const Search = () => {
             setLoad(false)
         }
 
-    }
+    }, [])
 
 
     return <Form ref={formRef} onSubmit={handleSubmit} className="container-form">

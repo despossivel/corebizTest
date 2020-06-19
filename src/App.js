@@ -1,5 +1,7 @@
 import React, { memo } from 'react';
 
+import CartProvider from './contexts/cart';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Slider from './components/Slider';
@@ -9,17 +11,13 @@ import BestSellers from './components/BestSellers';
 const App = () => {
   return (
     <div className="App">
-
-      <Header />
-
-      <Slider />
-
-      <BestSellers />
-
-      <Newsletter />
-
-      <Footer />
-
+      <CartProvider>
+        <Header />
+        <Slider />
+        <BestSellers />
+        <Newsletter />
+        <Footer />
+      </CartProvider>
     </div>
   );
 }
