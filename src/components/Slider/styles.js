@@ -105,22 +105,7 @@ export const ContainerText = styled.div`
         line-height: 1;
     }
 
-
-    /* @media (min-width:1000px) 
-    {
-
-        span{
-        float: left;
-        position: absolute;
-        margin-top: 0px;
-    }
-
-    span+span{
-        margin-top: 25px;
-    }
-
-       
-    } */
+ 
 
 
 

@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     background: #000000;
-    height: 180px;
-    min-height: 180px;
+    height: 40vh;
+    min-height: 40vh;
     color: #fff;
     padding: 10px;
 
@@ -17,7 +17,7 @@ export const Container = styled.div`
     @media (min-width:300px) and (max-width: 1000px)
     {
         flex-direction: column;
-        height: 420px;
+        height: 80vh;
     }
 
 `;
