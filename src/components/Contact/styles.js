@@ -1,13 +1,27 @@
 import styled from 'styled-components';
 
-export const Container = styled.button`
+export const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    button+button{
+        margin-top: 20px;
+    }
+
+
+
+`;
+
+
+export const Button = styled.button`
     height: 37px;
     display: flex;
     justify-content: center;
     align-items: center;
     max-width:190px;
-    width:${props => props.width ? props.width : '190px'};
-    background: ${props => props.background ? props.background : '#fff'};
+    width:190px;
     border-radius: 7px;
     border:0px;
     cursor: pointer;
@@ -20,6 +34,5 @@ export const Container = styled.button`
     &:focus{
         outline:0px;
     }
+
 `;
-
-

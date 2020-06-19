@@ -7,7 +7,11 @@ height: ${props => props.height ? props.height : '33px'};
 border: ${props => props.border ? props.border : '0'};
 background: ${props => props.background ? props.background : '#efefef'};
 border-radius: ${props => props.borderRadius ? props.borderRadius : '7px 0px 0px 7px'};
+padding-left: 12px;
 
+    &:focus{
+        outline: 0px;
+    }
 
 
     @media (min-width:300px) and (max-width: 650px)

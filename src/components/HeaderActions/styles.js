@@ -14,6 +14,7 @@ export const Item = styled.div`
     align-items: center;
     margin-right: 20px;
 
+
     &:hover {
         cursor: pointer;
     }
@@ -22,10 +23,12 @@ export const Item = styled.div`
 
 export const Text = styled.span`
 color: #7A7A7A;
+transition: 0.3s;
 
     &:hover {
         color: #333;
         font-weight: 700;
+        opacity: 1
     }
 
 `;

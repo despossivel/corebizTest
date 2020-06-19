@@ -1,9 +1,7 @@
-import React from 'react';
-import Img from '../../asserts/logo.jpg'
- import { Container } from './styles';
+import React, { memo } from 'react';
+import Img from '../../asserts/logo.png'
+import { Container } from './styles';
 
-function Logo() {
-  return <Container src={Img} />;
-}
+const Logo = () => <Container src={Img} />;
 
-export default Logo;
+export default memo(Logo);
