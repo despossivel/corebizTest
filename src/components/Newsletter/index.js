@@ -6,7 +6,9 @@ import Button from '../Button'
 import Input from '../Input';
 import Loading from '../Loading';
 import { Container, Text, FlexContainer } from './styles';
-
+import {
+  postNewsletter
+} from '../../services/api';
 
 
 const Sucess = ({
@@ -28,7 +30,7 @@ const Newsletter = () => {
       formRef.current.setErrors({});
 
       const schema = Yup.object().shape({
-        nome: Yup.string().required('Preencha com seu nome completo'),
+        name: Yup.string().required('Preencha com seu nome completo'),
         email: Yup.string().required('Preencha com um e-mail válido'),
       });
 
@@ -36,11 +38,24 @@ const Newsletter = () => {
         abortEarly: false,
       });
 
-      setTimeout(() => {
+
+      const {
+        name,
+        email
+      } = data;
+
+      const response = await postNewsletter({
+        name,
+        email
+      });
+
+      if (response.status === 200) {
         setSubmitSuccess(true)
         setLoad(false)
-      }, 3500)
-
+      } else {
+        setLoad(false)
+        console.error('Aconteceu alguma coisa!', response.status)
+      }
 
     } catch (err) {
       const validationErrors = {};
@@ -52,7 +67,7 @@ const Newsletter = () => {
       }
       setLoad(false)
     }
-
+    reset();
   }, [])
 
 
@@ -60,8 +75,8 @@ const Newsletter = () => {
     {submitSuccess ? <Sucess setSubmitSuccess={setSubmitSuccess} /> : <Container >
       <Text>Participe de nossas news com promoções e novidades!</Text>
       <FlexContainer>
-        <Input name="nome" placeholder="Digite seu nome" background="#fff" />
-        <Input name="email" placeholder="Digite seu e-amil" background="#fff" />
+        <Input name="name" placeholder="Digite seu nome" background="#fff" />
+        <Input name="email" placeholder="Digite seu e-mail" background="#fff" />
         <Button label={load ? <Loading /> : 'Eu quero!'} icon={false} background="#000" color="#fff" type="submit" />
       </FlexContainer>
     </Container>}

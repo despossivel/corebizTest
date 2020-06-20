@@ -1,36 +1,58 @@
-import React, { memo, useContext } from 'react';
-import ProductiMG from '../../asserts/product1.png';
+import React, { memo, useContext, useCallback } from 'react';
 import {
   CartContext
 } from '../../contexts/cart';
 import Button from '../Button';
 import StarRatingComponent from 'react-star-rating-component';
 
-import { Container, Img, TagOff, Details, Text } from './styles';
+import { Container, ContainerImg, Img, TagOff, Details, Text } from './styles';
 
-const Product = () => {
+const Product = ({
+  productId,
+  productName,
+  stars,
+  imageUrl,
+  listPrice,
+  price,
+  installments
+}) => {
   const {
     addItem
   } = useContext(CartContext)
 
+
+  const formatReal = useCallback((int) => {
+    var tmp = int + '';
+    tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
+    if (tmp.length > 6)
+      tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+
+    return tmp;
+  }, [])
+
+
   return <Container>
-    <div>
-      <Img src={ProductiMG} alt="product1" />
-      <TagOff />
-    </div>
+    <ContainerImg>
+      {listPrice ? <TagOff >OFF</TagOff> : false}
+
+      <Img src={imageUrl} alt="product1" />
+
+    </ContainerImg>
     <Details>
-      <Text fontSize='14px' color="#7A7A7A">Sapato floater preto</Text>
+      <Text fontSize='14px' color="#7A7A7A">{productName}</Text>
       <StarRatingComponent
-        value={4.5}
+        name={productName}
+        value={stars}
         starCount={5}
         starColor={'#F8475F'}
         emptyStarColor={'#ccc'}
         editing={false}
       />
+      {listPrice ? <Text fontSize='12px' color="#7A7A7A" textDecoration="line-through">de R$ {formatReal(listPrice)}</Text> : false}
 
-      <Text fontSize='12px' color="#7A7A7A">de R$ 299,00</Text>
-      <Text fontSize='17px' color="#000" fontWeight="bold">por R$ 259,90</Text>
-      <Text fontSize='12px' color="#7A7A7A">ou em 9px de R$ 28,87</Text>
+      <Text fontSize='17px' color="#000" fontWeight="bold">por R$ {formatReal(price)}</Text>
+      {installments.length > 0 ? <Text fontSize='12px' color="#7A7A7A">ou em {installments[0].quantity}x de R$ {formatReal(installments[0].value)}</Text> : false}
+      {/* */}
     </Details>
     <Button {...{
       label: "Comprar",

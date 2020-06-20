@@ -19,8 +19,11 @@
     "yup": "^0.29.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "npm start",
+    "start": "react-scripts start  .env",
+    "build": "react-scripts build .env",
+    "build-test": "yarn build .env",
+    "build-production": "yarn build .env",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
