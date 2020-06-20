@@ -1,7 +1,7 @@
 version: "2.3"
 services:
   ecommerce-develop:
-    container_name: eCommerce-develop
+    container_name: ecommerce-develop
     entrypoint: dockerize -template ./.docker/.env.template:.env
     tty: true
     build:
