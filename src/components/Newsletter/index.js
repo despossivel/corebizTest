@@ -49,15 +49,10 @@ const Newsletter = () => {
         abortEarly: false,
       });
 
-
       const {
         name,
         email
       } = data;
-
-      // const isValidEmail = IsEmail(email);
-
-      // if (!isValidEmail) return alert('E-mail invalido!');
 
       const response = await postNewsletter({
         name,
