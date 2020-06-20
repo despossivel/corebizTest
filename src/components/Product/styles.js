@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    min-height: 356px;
+    height: 356px;
     width: 216px;
     display: flex;
     flex-direction: column;
@@ -21,10 +23,11 @@ export const Container = styled.div`
 `;
 
 export const ContainerImg = styled.div`
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+    position: relative;
     text-align: center;
     border-radius: 7px;
 `;
@@ -36,12 +39,24 @@ export const Img = styled.img`
     border-radius: 7px;
 `;
 
-export const TagOff = styled.span`
-    border-radius: 7px 7px 0px 0px;
-    width: 100%;
-    background: #F8475F;
+export const TagOff = styled.div`
+    position: absolute;
+    right: 0px;
     color: #fff;
     font-weight: 900;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 80px 80px 0;
+    border-color: transparent #F8475F transparent transparent;
+    /* border-radius: 7px 0px 0px 0px; */
+    span{
+        margin-left: 41px;
+        margin-top: 15px;
+        position: absolute;
+    }
+
+
 `;
 
 export const Details = styled.div`

@@ -33,7 +33,9 @@ const Product = ({
 
   return <Container>
     <ContainerImg>
-      {listPrice ? <TagOff >OFF</TagOff> : false}
+      {listPrice ? <TagOff >
+        <span>OFF</span>
+      </TagOff> : false}
 
       <Img src={imageUrl} alt="product1" />
 
