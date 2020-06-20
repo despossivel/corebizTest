@@ -2,13 +2,13 @@ import React, { memo, useState, useRef, useCallback } from 'react';
 import { Form } from "@unform/web";
 import * as Yup from 'yup';
 // import { AiOutlineSearch } from 'react-icons/ai';
-import Button from '../Button'
-import Input from '../Input';
-import Loading from '../Loading';
+import Button from 'components/Button'
+import Input from 'components/Input';
+import Loading from 'components/Loading';
 import { Container, Text, FlexContainer } from './styles';
 import {
   postNewsletter
-} from '../../services/api';
+} from 'services/api';
 
 
 const Sucess = ({
@@ -16,7 +16,14 @@ const Sucess = ({
 }) => <Container >
     <Text fontWeight="bold">Seu e-amil foi cadastrado com sucesso!</Text>
     <Text size="12px">A partir de agora você receberá as novidade e ofertas exclusivas.</Text>
-    <Button label="Cadastrar novo e-mail " icon={false} background="#000" color="#fff" type="submit" onClick={e => setSubmitSuccess(false)} />
+    <Button {...{
+      label: "Cadastrar novo e-mail",
+      icon: false,
+      background: "#000",
+      color: "#fff",
+      type: "submit",
+      onClick: e => setSubmitSuccess(false)
+    }} />
   </Container>;
 
 const Newsletter = () => {
@@ -75,9 +82,15 @@ const Newsletter = () => {
     {submitSuccess ? <Sucess setSubmitSuccess={setSubmitSuccess} /> : <Container >
       <Text>Participe de nossas news com promoções e novidades!</Text>
       <FlexContainer>
-        <Input name="name" placeholder="Digite seu nome" background="#fff" />
-        <Input name="email" placeholder="Digite seu e-mail" background="#fff" />
-        <Button label={load ? <Loading /> : 'Eu quero!'} icon={false} background="#000" color="#fff" type="submit" />
+        <Input {...{ name: "name", placeholder: "Digite seu nome", background: "#fff" }} />
+        <Input {...{ name: "email", placeholder: "Digite seu e-mail", background: "#fff" }} />
+        <Button {...{
+          label: load ? <Loading /> : 'Eu quero!',
+          icon: false,
+          background: "#000",
+          color: "#fff",
+          type: "submit"
+        }} />
       </FlexContainer>
     </Container>}
   </Form>;

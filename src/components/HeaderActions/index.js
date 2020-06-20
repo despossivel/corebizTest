@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { AiOutlineUser } from 'react-icons/ai';
-import Cart from '../Cart';
+import Cart from 'components/Cart';
 import { Container, Item, Text } from './styles';
 
 const HeaderActions = () => <Container >

@@ -12,6 +12,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-smart-slider": "^0.1.2",
     "react-star-rating-component": "^1.4.1",
@@ -26,8 +27,8 @@
     "build-production": "yarn build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "docker-up-develop":"docker-compose up -d --build",
-    "docker-up-production":"docker-compose -f docker-compose-production.yaml up -d --build"
+    "docker-up-develop": "docker-compose up -d --build",
+    "docker-up-production": "docker-compose -f docker-compose-production.yaml up -d --build"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
-import LocationInfo from '../LocationInfo';
-import Contact from '../Contact';
-import Copyright from '../Copyright';
+import LocationInfo from 'components/LocationInfo';
+import Contact from 'components/Contact';
+import Copyright from 'components/Copyright';
 import { Container } from './styles';
 
 const Footer = () => <Container>

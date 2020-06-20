@@ -1,7 +1,7 @@
 import React, { memo, useContext } from 'react';
 import {
     CartContext
-} from '../../contexts/cart';
+} from 'contexts/cart';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { Container, Count } from './styles';
 

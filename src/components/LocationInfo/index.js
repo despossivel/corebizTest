@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import Title from '../TitleSection';
+import Title from 'components/TitleSection';
 import { Container, Content } from './styles';
 
 const LocationInfo = () => <Container>

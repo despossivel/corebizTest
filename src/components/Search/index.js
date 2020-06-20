@@ -3,7 +3,7 @@ import { Form } from "@unform/web";
 import * as Yup from 'yup';
 import { AiOutlineSearch } from 'react-icons/ai';
 
-import Input from '../Input';
+import Input from 'components/Input';
 import { Container, Button } from './styles';
 
 const Search = () => {
@@ -41,7 +41,11 @@ const Search = () => {
 
     return <Form ref={formRef} onSubmit={handleSubmit} className="container-form">
         <Container >
-            <Input name="contextSearch" placeholder="O que está procurando?" borderRadius="7px 0px 0px 7px" />
+            <Input {...{
+                name: "contextSearch",
+                placeholder: "O que está procurando?",
+                borderRadius: "7px 0px 0px 7px"
+            }} />
             <Button type="submit" >{load ? 'Loading...' : <AiOutlineSearch />}</Button>
         </Container>
     </Form>

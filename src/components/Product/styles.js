@@ -16,17 +16,12 @@ export const Container = styled.div`
     &:hover{
         background: #F2F2F2;
         cursor: pointer;
-        // padding-bottom: 10px;
         border-radius: 7px 7px 7px 7px;
     }
 
 `;
 
 export const ContainerImg = styled.div`
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
     position: relative;
     text-align: center;
     border-radius: 7px;
@@ -49,7 +44,6 @@ export const TagOff = styled.div`
     border-style: solid;
     border-width: 0 80px 80px 0;
     border-color: transparent #F8475F transparent transparent;
-    /* border-radius: 7px 0px 0px 0px; */
     span{
         margin-left: 41px;
         margin-top: 15px;

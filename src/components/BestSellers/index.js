@@ -1,12 +1,12 @@
 import React, { memo, useEffect, useState, useMemo } from 'react';
-import Title from '../TitleSection';
-import Product from '../Product';
-import Loading from '../Loading';
+import Title from 'components/TitleSection';
+import Product from 'components/Product';
+import Loading from 'components/Loading';
 import { Container, Items, ButtonArrow } from './styles';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import {
   getProducts
-} from '../../services/api';
+} from 'services/api';
 
 const BestSellers = () => {
   const [load, setLoad] = useState(true);

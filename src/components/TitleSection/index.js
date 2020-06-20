@@ -5,11 +5,9 @@ import { Container } from './styles';
 const TitleSection = ({
     text,
     ...rest
-}) => {
-    return <Container {...rest}>
+}) => <Container {...rest}>
         <b>{text}</b>
         <span></span>
     </Container>;
-}
 
 export default memo(TitleSection);
