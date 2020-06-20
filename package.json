@@ -25,7 +25,9 @@
     "build-test": "yarn build .env",
     "build-production": "yarn build .env",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "docker-up-develop":"docker-compose up -d --build",
+    "docker-up-production":"docker-compose -f docker-compose-production.yaml up -d --build"
   },
   "eslintConfig": {
     "extends": "react-app"
