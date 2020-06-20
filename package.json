@@ -20,10 +20,10 @@
   },
   "scripts": {
     "dev": "npm start",
-    "start": "react-scripts start  .env",
+    "start": "react-scripts start .env",
     "build": "react-scripts build .env",
-    "build-test": "yarn build .env",
-    "build-production": "yarn build .env",
+    "build-test": "yarn build",
+    "build-production": "yarn build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "docker-up-develop":"docker-compose up -d --build",

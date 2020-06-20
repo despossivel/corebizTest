@@ -2,14 +2,14 @@ version: "2.3"
 services:
   ecommerce-develop:
     container_name: ecommerce-develop
-    entrypoint: dockerize -template ./.docker/.env.template:.env
+    entrypoint: dockerize -template ./.docker/.env.template:.env yarn dev .env
     tty: true
     build:
-      context: ./.docker
+      context: .
       dockerfile: Dockerfile
     volumes:
-        - ".:/app"
-        - "/app/node_modules"
+      - ".:/app"
+      - "./node_modules:/app/node_modules"
     ports:
       - "3000:3000"
     environment:
