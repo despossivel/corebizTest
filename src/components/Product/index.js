@@ -22,7 +22,7 @@ const Product = ({
 
 
   const formatReal = useCallback((int) => {
-    var tmp = int + '';
+    let tmp = int + '';
     tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
     if (tmp.length > 6)
       tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
@@ -45,38 +45,38 @@ const Product = ({
     </ContainerImg>
     <Details>
 
-        <Text {...{
-          fontSize: '14px',
-          color: "#7A7A7A"
-        }}>{productName}</Text>
+      <Text {...{
+        fontSize: '14px',
+        color: "#7A7A7A"
+      }}>{productName}</Text>
 
-        <StarRatingComponent
-          {...{
-            name: productName,
-            value: stars,
-            starCount: 5,
-            starColor: '#F8475F',
-            emptyStarColor: '#ccc',
-            editing: false
-          }}
-        />
+      <StarRatingComponent
+        {...{
+          name: productName,
+          value: stars,
+          starCount: 5,
+          starColor: '#F8475F',
+          emptyStarColor: '#ccc',
+          editing: false
+        }}
+      />
 
-        {listPrice ? <Text {...{
-          fontSize: '12px',
-          color: "#7A7A7A",
-          textDecoration: "line-through"
-        }}>de R$ {formatReal(listPrice)}</Text> : false}
+      {listPrice ? <Text {...{
+        fontSize: '12px',
+        color: "#7A7A7A",
+        textDecoration: "line-through"
+      }}>de R$ {formatReal(listPrice)}</Text> : false}
 
-        <Text {...{
-          fontSize: '17px',
-          color: "#000",
-          fontWeight: "bold"
-        }}>por R$ {formatReal(price)}</Text>
+      <Text {...{
+        fontSize: '17px',
+        color: "#000",
+        fontWeight: "bold"
+      }}>por R$ {formatReal(price)}</Text>
 
-        {installments.length > 0 ? <Text {...{
-          fontSize: '12px', color: "#7A7A7A"
-        }}>ou em {installments[0].quantity}x de R$ {formatReal(installments[0].value)}</Text> : false}
-        
+      {installments.length > 0 ? <Text {...{
+        fontSize: '12px', color: "#7A7A7A"
+      }}>ou em {installments[0].quantity}x de R$ {formatReal(installments[0].value)}</Text> : false}
+
     </Details>
 
     <Button {...{
@@ -84,7 +84,7 @@ const Product = ({
       background: "#000",
       onClick: e => addItem()
     }} />
-    
+
   </Container >;
 }
 

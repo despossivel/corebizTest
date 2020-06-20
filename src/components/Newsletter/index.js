@@ -26,6 +26,10 @@ const Sucess = ({
     }} />
   </Container>;
 
+
+
+
+
 const Newsletter = () => {
   const formRef = useRef(null);
   const [load, setLoad] = useState(false);
@@ -50,6 +54,10 @@ const Newsletter = () => {
         name,
         email
       } = data;
+
+      // const isValidEmail = IsEmail(email);
+
+      // if (!isValidEmail) return alert('E-mail invalido!');
 
       const response = await postNewsletter({
         name,
@@ -78,12 +86,23 @@ const Newsletter = () => {
   }, [])
 
 
+
+  // const IsEmail = useCallback((email) => {
+  //   const exclude = /[^@-.w]|^[_@.-]|[._-]{2}|[@.]{2}|(@)[^@]*1/;
+  //   const check = /@[w-]+./;
+  //   const checkend = /.[a-zA-Z]{2,3}$/;
+  //   if (((email.search(exclude) != -1) || (email.search(check)) == -1) || (email.search(checkend) == -1)) { return false; }
+  //   else { return true; }
+  // }, [])
+
+
+
   return <Form ref={formRef} onSubmit={handleSubmit} className="container-form">
     {submitSuccess ? <Sucess setSubmitSuccess={setSubmitSuccess} /> : <Container >
       <Text>Participe de nossas news com promoções e novidades!</Text>
       <FlexContainer>
         <Input {...{ name: "name", placeholder: "Digite seu nome", background: "#fff" }} />
-        <Input {...{ name: "email", placeholder: "Digite seu e-mail", background: "#fff" }} />
+        <Input {...{ name: "email", placeholder: "Digite seu e-mail", background: "#fff", type:'email' }} />
         <Button {...{
           label: load ? <Loading /> : 'Eu quero!',
           icon: false,
