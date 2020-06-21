@@ -9,17 +9,14 @@ Além dos requisitos básicos exigido, foram implementados também,   contêiner
 
 Em ambas as branchs os passos de, instalação de dependências, execução de testes, build da aplicação, build do contêiner são executados. 
 
-
 ## Scripts disponíveis
 No diretório do projeto, você pode executar:
   
-
 ### `yarn start`
 
 Para executa o aplicativo no modo de desenvolvimento. <br />
 
 Abrirá [http://localhost:3000](http://localhost:3000) para visualizá-lo no navegador.
-
 
 ### Iniciando em contêiner
 Com o docker e docker-compose em sua máquina, você pode executar: 
@@ -30,7 +27,6 @@ Criando e subindo o contêiner em modo de desenvolvimento, abra [http://localhos
 
 Em ambas alternativas a página será recarregada se você fizer edições. <br/>
  
-
 ## Tests 
   Para executar os testes de integração, você pode executar:
 
@@ -38,7 +34,6 @@ Em ambas alternativas a página será recarregada se você fizer edições. <br/
 
 Inicia o corredor de teste no modo de exibição interativa. <br/> 
 
-  
 ## Efetuando build
 
 Para efetuar o build da aplicação você pode executar:
@@ -53,8 +48,5 @@ Para efetuar o build em um contêiner docker, você pode executar:
 ### `docker compose -f docker-compose-production.yaml up -d --build`
 
  Criando e subindo o contêiner para produção e abra `[http://localhost:8080](http://localhost:8080)` para visualizar. <br/>
-
-
-
 
 @[despossivel](http://instagram.com/despossivel)
