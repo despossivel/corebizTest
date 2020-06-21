@@ -1,0 +1,17 @@
+version: "2.3"
+services:
+  ecommerce:
+    container_name: ecommerce
+    # entrypoint: dockerize -template ./.docker/.env.template:.env
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile-production
+    volumes:
+      - ".:/app"
+      - "./node_modules:/app/node_modules"
+    ports:
+      - "8080:80"
+    environment:
+      - REACT_APP_ENV=production
+      - REACT_APP_SOCKET_HOST=https://corebiz-test.herokuapp.com/api/v1

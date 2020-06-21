@@ -1,0 +1,56 @@
+{
+  "name": "corebiz",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@unform/core": "^2.1.3",
+    "@unform/web": "^2.1.3",
+    "axios": "^0.19.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-smart-slider": "^0.1.2",
+    "react-star-rating-component": "^1.4.1",
+    "styled-components": "^5.1.1",
+    "yup": "^0.29.1"
+  },
+  "scripts": {
+    "dev": "npm start",
+    "start": "react-scripts start .env",
+    "build": "react-scripts build .env",
+    "build-test": "yarn build",
+    "build-production": "yarn build",
+    "test": "jest",
+    "eject": "react-scripts eject",
+    "docker-up-develop": "docker-compose up -d --build",
+    "docker-up-production": "docker-compose -f docker-compose-production.yaml up -d --build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "^7.10.1",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "react-test-renderer": "^16.13.1",
+    "supertest": "^4.0.2"
+  }
+}
