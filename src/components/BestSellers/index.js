@@ -8,6 +8,9 @@ import {
   getProducts
 } from 'services/api';
 
+// import FlatList from 'flatlist-react';
+
+
 const BestSellers = () => {
   const [load, setLoad] = useState(true);
   const [products, setProducts] = useState([])
@@ -48,7 +51,8 @@ const BestSellers = () => {
       text: 'Mais Vendidos',
       color: '#000',
       borderColor: '#ccc',
-      paddingLeft: '5%'
+      paddingLeft: '5%',
+      width: '50%'
     }} />
 
     <Items>

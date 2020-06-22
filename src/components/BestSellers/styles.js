@@ -6,6 +6,17 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: normal;
+
+
+    @media (min-width:300px) and (max-width: 1000px)
+    {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
 `;
 
 export const Items = styled.div`
@@ -13,6 +24,18 @@ export const Items = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 43px;
+
+    @media (min-width:300px) and (max-width: 1000px)
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1px 1px;
+        width: 56%;
+       
+    }
+
 `;
 
 export const ButtonArrow = styled.div`
@@ -23,4 +46,12 @@ export const ButtonArrow = styled.div`
         font-size: 22px;
         cursor: pointer;
     }
+
+
+    @media (min-width:300px) and (max-width: 1000px)
+    {
+        display:none;
+    }
+
+
 `;

@@ -44,7 +44,8 @@ const Search = () => {
             <Input {...{
                 name: "contextSearch",
                 placeholder: "O que está procurando?",
-                borderRadius: "7px 0px 0px 7px"
+                borderRadius: "7px 0px 0px 7px",
+                width: '500px'
             }} />
             <Button type="submit" >{load ? 'Loading...' : <AiOutlineSearch />}</Button>
         </Container>
