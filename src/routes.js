@@ -10,23 +10,18 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Home from 'pages/Home'
 
-
-const Routes = () => {
-  return (
-    <div className="App">
-      <Router>
-        <CartProvider>
-          <Header />
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-          </Switch>
-          <Footer />
-        </CartProvider>
-      </Router>
-    </div>
-  );
-}
+const Routes = () => <div className="App">
+  <Router>
+    <CartProvider>
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+      </Switch>
+      <Footer />
+    </CartProvider>
+  </Router>
+</div>;
 
 export default memo(Routes);

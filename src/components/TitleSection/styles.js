@@ -7,6 +7,7 @@ font-size: 18px;
 margin-bottom: 10px;
 padding-left: ${props => props.paddingLeft ? props.paddingLeft : '0px'};
 color: ${props => props.color ? props.color : '#0000'};
+width: ${props => props.width ? props.width : 'auto'};
 
 span{
     border-bottom: 4px solid ${props => props.borderColor ? props.borderColor : '#0000'};

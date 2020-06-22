@@ -11,11 +11,19 @@ export const Container = styled.div`
     border-bottom: 1px solid #cccccc8f;
 
 
+
     @media (min-width:300px) and (max-width: 1000px)
     {
         flex-direction: column;
         margin-top: 15px;
         padding-bottom: 15px;
-        height: 104px;
+        height: 20vh;
+    
+    
+        form{
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+    
     }
 `;

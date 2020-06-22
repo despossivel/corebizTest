@@ -19,6 +19,11 @@ export const Container = styled.div`
         border-radius: 7px 7px 7px 7px;
     }
 
+    @media (min-width:300px) and (max-width: 1000px)
+    {
+        margin-bottom: 15px;
+    }
+
 `;
 
 export const ContainerImg = styled.div`
