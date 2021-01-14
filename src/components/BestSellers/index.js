@@ -8,38 +8,34 @@ import {
   getProducts
 } from 'services/api';
 
-// import FlatList from 'flatlist-react';
-
-
 const BestSellers = () => {
-  const [load, setLoad] = useState(true);
-  const [products, setProducts] = useState([])
+  const [load, setLoad] = useState(true),
+    [products, setProducts] = useState([])
 
-  useEffect(() => {
-    (async () => {
-      try {
+  useEffect(() => (async () => {
+    try {
 
-        const response = await getProducts();
-        switch (response.status) {
-          case 200:
-            setProducts(response.data);
-            break;
+      const response = await getProducts();
 
-          case 404:
-            console.log('Nada encontradoi')
-            break;
+      switch (response.status) {
+        case 200:
+          setProducts(response.data);
+          break;
 
-          default:
-            console.error('Aconteceu alguma coisa', response.data)
-            break;
-        }
-        setLoad(false)
+        case 404:
+          console.log('Nada encontrado!')
+          break;
 
-      } catch (error) {
-        console.error(error)
+        default:
+          console.error('Aconteceu alguma coisa', response.data)
+          break;
       }
-    })()
-  }, [])
+      setLoad(false)
+
+    } catch (error) {
+      console.error(error)
+    }
+  })(), [])
 
 
   const productRender = useMemo(() => products.map((product) => <Product {...product} />), [products])

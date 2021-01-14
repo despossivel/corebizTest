@@ -20,17 +20,6 @@ const Product = ({
     addItem
   } = useContext(CartContext)
 
-
-  const formatReal = useCallback((int) => {
-    let tmp = int + '';
-    tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
-    if (tmp.length > 6)
-      tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
-
-    return tmp;
-  }, [])
-
-
   return <Container>
     <ContainerImg>
       {listPrice ? <TagOff >
@@ -65,17 +54,17 @@ const Product = ({
         fontSize: '12px',
         color: "#7A7A7A",
         textDecoration: "line-through"
-      }}>de R$ {formatReal(listPrice)}</Text> : false}
+      }}>de {listPrice.toLocaleString("pt-br", { style: 'currency', currency: 'BRL' })}</Text> : false}
 
       <Text {...{
         fontSize: '17px',
         color: "#000",
         fontWeight: "bold"
-      }}>por R$ {formatReal(price)}</Text>
+      }}>por {price.toLocaleString("pt-br", { style: 'currency', currency: 'BRL' })}</Text>
 
       {installments.length > 0 ? <Text {...{
         fontSize: '12px', color: "#7A7A7A"
-      }}>ou em {installments[0].quantity}x de R$ {formatReal(installments[0].value)}</Text> : false}
+      }}>ou em {installments[0].quantity}x de {installments[0].value.toLocaleString("pt-br", { style: 'currency', currency: 'BRL' })}</Text> : false}
 
     </Details>
 

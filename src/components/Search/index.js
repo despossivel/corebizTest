@@ -2,13 +2,12 @@ import React, { useRef, useState, memo, useCallback } from 'react';
 import { Form } from "@unform/web";
 import * as Yup from 'yup';
 import { AiOutlineSearch } from 'react-icons/ai';
-
 import Input from 'components/Input';
 import { Container, Button } from './styles';
 
 const Search = () => {
-    const formRef = useRef(null);
-    const [load, setLoad] = useState(false);
+    const formRef = useRef(null),
+        [load, setLoad] = useState(false);
 
     const handleSubmit = useCallback(async (data, { reset }) => {
         setLoad(true);

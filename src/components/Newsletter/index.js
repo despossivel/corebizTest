@@ -27,13 +27,10 @@ const Sucess = ({
   </Container>;
 
 
-
-
-
 const Newsletter = () => {
-  const formRef = useRef(null);
-  const [load, setLoad] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const formRef = useRef(null),
+    [load, setLoad] = useState(false),
+    [submitSuccess, setSubmitSuccess] = useState(false);
 
   const handleSubmit = useCallback(async (data, { reset }) => {
     setLoad(true);
@@ -97,7 +94,7 @@ const Newsletter = () => {
       <Text>Participe de nossas news com promoções e novidades!</Text>
       <FlexContainer>
         <Input {...{ name: "name", placeholder: "Digite seu nome", background: "#fff" }} />
-        <Input {...{ name: "email", placeholder: "Digite seu e-mail", background: "#fff", type:'email' }} />
+        <Input {...{ name: "email", placeholder: "Digite seu e-mail", background: "#fff", type: 'email' }} />
         <Button {...{
           label: load ? <Loading /> : 'Eu quero!',
           icon: false,

@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, memo } from "react";
 import { useField } from "@unform/core";
-
 import { Container, Input as InputElement, ERROR } from './styles';
 
 const Input = ({ name, label, ...rest }) => {
-  const inputRef = useRef(null);
-  const { fieldName, defaultValue = "", registerField, error } = useField(name);
+  const inputRef = useRef(null),
+    { fieldName, defaultValue = "", registerField, error } = useField(name);
 
   useEffect(() => {
     registerField({
@@ -15,10 +14,8 @@ const Input = ({ name, label, ...rest }) => {
     });
   }, [fieldName, registerField]);
 
-  return (
-    <Container>
+  return   <Container>
       {label && <label htmlFor={fieldName}>{label}</label>}
-
       <InputElement
         ref={inputRef}
         id={fieldName}
@@ -27,8 +24,7 @@ const Input = ({ name, label, ...rest }) => {
         {...rest}
       />
       {error && <ERROR>{error}</ERROR>}
-    </Container>
-  );
+    </Container>;
 }
 
 

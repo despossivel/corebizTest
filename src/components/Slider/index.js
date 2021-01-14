@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
 import SmartSlider from "react-smart-slider";
-
 import BannerBlack from 'asserts/bannerBlack.png';
 import Banner from 'asserts/banner.png';
 
@@ -16,7 +15,6 @@ import {
 } from './styles';
 
 const Slider = () => <Container>
-
   <SmartSlider
     slides={[
       {
@@ -40,7 +38,6 @@ const Slider = () => <Container>
     ]}
     buttonShape="square" // round or square
   />
-
 </Container>;
 
 export default memo(Slider);
