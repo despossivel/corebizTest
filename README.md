@@ -1,4 +1,5 @@
 
+![enter image description here](https://media-exp1.licdn.com/dms/image/C4D0BAQFa3VqmdEbv1w/company-logo_200_200/0/1572629889910?e=2159024400&v=beta&t=rUBQtn_Qvz_MNcNS8aeIvXWGiqC6J3VUDZP8GUZ8XG8)
 ## Corebiz E-commerce
 
   
@@ -93,4 +94,4 @@ Criando e subindo o contêiner para produção e abra `[http://localhost:8080](h
 
   
 
-@[despossivel](http://instagram.com/despossivel)
+@[despossivel](https://www.linkedin.com/in/despossivel/)
