@@ -1,4 +1,4 @@
-import React, { memo, useContext, useCallback } from 'react';
+import React, { memo, useContext } from 'react';
 import {
   CartContext
 } from 'contexts/cart';
@@ -8,7 +8,6 @@ import StarRatingComponent from 'react-star-rating-component';
 import { Container, ContainerImg, Img, TagOff, Details, Text } from './styles';
 
 const Product = ({
-  productId,
   productName,
   stars,
   imageUrl,
